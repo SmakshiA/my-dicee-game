@@ -17,7 +17,9 @@ void main() {
           ),
         ),
       ),
-      body: DicePage(),
+      body: SafeArea(
+        child: DicePage(),
+      ),
       backgroundColor: Colors.blue.shade900,
     ),
   ));
@@ -27,6 +29,25 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            height: 30,
+          ),
+          Expanded(child: Image(
+            image: AssetImage('images/dice1.png'),
+          )),
+          SizedBox(
+            height: 30,
+          ),
+          Expanded(child: Image(
+            image: AssetImage('images/dice6.png'),
+          )),
+          SizedBox(
+            height: 30,
+          ),
+        ],
+    );
   }
 }
