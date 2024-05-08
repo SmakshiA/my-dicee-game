@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -25,32 +24,38 @@ void main() {
   ));
 }
 
-
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
-          children: [
-            SizedBox(
-              height: 30,
+        children: [
+          SizedBox(
+            height: 30,
+          ),
+          Expanded(
+            child: IconButton(
+              icon: Image.asset('images/dice2.png'),
+              onPressed: () {
+                print('Left Button pressed');
+              },
             ),
-            Expanded(child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice2.png'),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Expanded(
+            child: IconButton(
+              icon: Image.asset('images/dice6.png'),
+              onPressed: (){
+                print('Right button pressed');
+              },
             ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Expanded(child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice6.png'),
-            )),
-            SizedBox(
-              height: 30,
-            ),
-          ],
+          ),
+          SizedBox(
+            height: 30,
+          ),
+        ],
       ),
     );
   }
